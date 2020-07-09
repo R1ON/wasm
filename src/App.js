@@ -30,7 +30,8 @@ function App() {
           if (error) return "An error has occurred";
       
           const { module, instance } = data;
-          return <div>1 + 2 = {instance.exports.main()}</div>;
+          console.log('instance.exports', instance.exports)
+          return <div>1 + 2 = {String.fromCharCode(instance.exports._Z5hellov())}</div>;
         }}
       </Wasm>
     </div>
