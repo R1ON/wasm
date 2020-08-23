@@ -3,7 +3,7 @@ import Wasm from 'react-wasm';
 
 function App() {
   // WebAssembly.instantiateStreaming(fetch('../public/1.wasm'), {  })
-  //   .then(obj => console.log('obj', obj.instance.exports));
+  //   .then((obj) => console.log('instantiateStreaming: ', obj.instance.exports));
 
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
       
           const { instance } = data;
 
-          console.log('instance.exports', instance.exports);
+          console.log('react-wasm: ', instance.exports);
 
           return <div>5 * 2 = {instance.exports.doubling(5)}</div>;
         }}
