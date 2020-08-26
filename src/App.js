@@ -10,7 +10,10 @@ function App() {
       <Wasm url="../public/1.wasm">
         {({ loading, error, data }) => {
           if (loading) return 'Loading...';
-          if (error) return 'An error has occurred';
+          if (error) {
+            console.error('error', error);
+            return 'An error has occurred';
+          }
       
           const { instance } = data;
 
